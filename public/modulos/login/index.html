@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-dark text-white d-flex align-items-center justify-content-center" style="min-height:100vh">
+
+  <div style="width:320px">
+    <h2 class="mb-4 text-center">🎬 Login</h2>
+    <p id="msg-erro" class="text-danger text-center" style="display:none"></p>
+
+    <div class="mb-3">
+      <label class="form-label">Login</label>
+      <input type="text" id="input-login" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Senha</label>
+      <input type="password" id="input-senha" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <button id="btn-entrar" class="btn w-100" style="background:#e8b14b;color:#111;font-weight:700">Entrar</button>
+  </div>
+
+
+  <script src="../../login.js"></script>
+  <script>
+    document.getElementById("btn-entrar").addEventListener("click", async () => {
+      const login = document.getElementById("input-login").value.trim();
+      const senha = document.getElementById("input-senha").value.trim();
+      const erro = document.getElementById("msg-erro");
+
+      const usuario = await loginUser(login, senha);
+      if (usuario) {
+        window.location.href = "../../index.html";
+      } else {
+        erro.textContent = "Login ou senha inválidos.";
+        erro.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+{
+  
+  "catalogo": [
+    {
+      "id": 1,
+      "titulo": "Tropa de Elite",
+      "descricaoCurta": "O Capitão Nascimento busca um substituto enquanto enfrenta o crime nas favelas.",
+      "descricaoCompleta": "Um retrato cru da violência urbana carioca, narrado pelo Capitão Nascimento. Expõe corrupção, brutalidade policial e a falência das instituições brasileiras. Venceu o Urso de Ouro em Berlim.",
+      "imagem": "assets/img/TropaElite.jpg",
+      "categoria": "Ação",
+      "nota": 8.6,
+      "tipo": "filme",
+      "destaque": true,
+      "tags": ["ação", "crime", "brasil"]
+    },
+    {
+      "id": 2,
+      "titulo": "Como Treinar o Seu Dragão",
+      "descricaoCurta": "Um jovem viking forma uma amizade com um dragão que deveria ter matado.",
+      "descricaoCompleta": "Uma das animações mais emotivas já feitas. A relação entre Soluço e Banguela é construída quase sem diálogos, através de cenas visuais poderosas. A trilha sonora e as cenas de voo são inesquecíveis.",
+      "imagem": "assets/img/ComoTreinarPoster.jpg",
+      "categoria": "Animação",
+      "nota": 8.1,
+      "tipo": "filme",
+      "destaque": true,
+      "tags": ["animação", "aventura", "família"]
+    },
+    {
+      "id": 3,
+      "titulo": "Karatê Kid",
+      "descricaoCurta": "Daniel aprende karatê com o senhor Miyagi e supera valentões.",
+      "descricaoCompleta": "Um clássico atemporal sobre disciplina, respeito e superação. A relação entre Daniel e Miyagi é o coração do filme — uma das duplas mais queridas da história do cinema.",
+      "imagem": "assets/img/The_Karate_Kid_2010.jpg",
+      "categoria": "Drama",
+      "nota": 7.3,
+      "tipo": "filme",
+      "destaque": false,
+      "tags": ["drama", "esporte", "superação"]
+    },
+    {
+      "id": 4,
+      "titulo": "Clube da Luta",
+      "descricaoCurta": "Um homem insatisfeito forma um clube de luta com o enigmático Tyler Durden.",
+      "descricaoCompleta": "Uma das obras mais subversivas do cinema americano dos anos 90. Crítica devastadora ao consumismo e à masculinidade tóxica. O twist final é um dos mais impactantes da história.",
+      "imagem": "assets/img/ClubeDaLutaPoster.jpg",
+      "categoria": "Thriller",
+      "nota": 8.8,
+      "tipo": "filme",
+      "destaque": true,
+      "tags": ["thriller", "drama", "cult"]
+    },
+    {
+      "id": 5,
+      "titulo": "Emergência Radioativa",
+      "descricaoCurta": "O acidente com Césio-137 em Goiânia em 1987 é retratado de forma visceral.",
+      "descricaoCompleta": "Baseada no trágico acidente com o Césio-137 em Goiânia. A cápsula encontrada em clínica abandonada, o brilho azul hipnotizante e a contaminação em massa são reais. Uma mini-série brasileira essencial.",
+      "imagem": "assets/img/EmergenciaPoster.jpg",
+      "categoria": "Drama",
+      "nota": 9.4,
+      "tipo": "serie",
+      "destaque": true,
+      "tags": ["drama", "histórico", "brasil"]
+    },
+    {
+      "id": 6,
+      "titulo": "Breaking Bad",
+      "descricaoCurta": "Professor de química vira traficante para garantir o futuro da família.",
+      "descricaoCompleta": "Amplamente considerada a melhor série já produzida. Vince Gilligan conduz a transformação de Walter White com precisão cirúrgica. Bryan Cranston entrega uma performance histórica.",
+      "imagem": "assets/img/BreakingBadPoster.jpg",
+      "categoria": "Crime",
+      "nota": 9.5,
+      "tipo": "serie",
+      "destaque": true,
+      "tags": ["crime", "drama", "premiado"]
+    },
+    {
+      "id": 7,
+      "titulo": "The Boys",
+      "descricaoCurta": "Vigilantes tentam expor super-heróis corruptos controlados por uma corporação.",
+      "descricaoCompleta": "A desconstrução definitiva do gênero de super-heróis. Sátira feroz ao capitalismo, mídia e cultura de celebridades. Antony Starr como Homelander é um dos personagens mais perturbadores da TV.",
+      "imagem": "assets/img/TheBoysPoster.jpg",
+      "categoria": "Ação",
+      "nota": 8.7,
+      "tipo": "serie",
+      "destaque": false,
+      "tags": ["ação", "sátira", "ficção científica"]
+    },
+    {
+      "id": 8,
+      "titulo": "Invencível",
+      "descricaoCurta": "Filho do super-herói mais poderoso começa a desenvolver seus próprios poderes.",
+      "descricaoCompleta": "Reinventou o que uma série animada adulta pode ser. Violência brutal com consequências reais e drama familiar tocante. A revelação do final da primeira temporada choca qualquer um.",
+      "imagem": "assets/img/InvencivelPoster.jpg",
+      "categoria": "Animação",
+      "nota": 8.9,
+      "tipo": "serie",
+      "destaque": true,
+      "tags": ["animação", "super-herói", "adulto"]
+    },
+    {
+      "id": 9,
+      "titulo": "Cena de Fuga — Invencível",
+      "descricaoCurta": "Momento de virada em que Mark enfrenta as consequências de seus poderes.",
+      "descricaoCompleta": "Uma das cenas mais intensas da série, mostrando o peso emocional e físico de ser um super-herói no universo de Invencível.",
+      "imagem": "assets/img/CenaFugaInvencivel.jpg",
+      "categoria": "Ação",
+      "nota": 8.5,
+      "tipo": "serie",
+      "destaque": false,
+      "tags": ["ação", "super-herói"]
+    },
+    {
+      "id": 10,
+      "titulo": "Favela do Turano — Tropa de Elite",
+      "descricaoCurta": "Operação do BOPE na favela do Turano, um dos momentos mais tensos do filme.",
+      "descricaoCompleta": "Cena emblemática de Tropa de Elite que retrata a brutalidade e a complexidade das operações policiais nas favelas cariocas. José Padilha filma com um realismo desconcertante.",
+      "imagem": "assets/img/FavelaTurano.jpg",
+      "categoria": "Ação",
+      "nota": 8.6,
+      "tipo": "filme",
+      "destaque": false,
+      "tags": ["ação", "crime", "brasil"]
+    }
+  ],
+  "categorias": [
+    { "id": 1, "nome": "Ação" },
+    { "id": 2, "nome": "Drama" },
+    { "id": 3, "nome": "Animação" },
+    { "id": 4, "nome": "Thriller" },
+    { "id": 5, "nome": "Crime" }
+  ],
+  "favoritos": [
+    { "id": 1, "catalogoId": 6 },
+    { "id": 2, "catalogoId": 4 },
+    { "id": 3, "catalogoId": 8 }
+  ],
+  "usuarios": [
+  { "id": 1, "nome": "Admin", "login": "admin", "senha": "123", "email": "admin@email.com" },
+  { "id": 2, "nome": "User",  "login": "user",  "senha": "123", "email": "user@email.com" }
+]
+}

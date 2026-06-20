@@ -1,25 +1,101 @@
-const data = {
-    "produtos": [
-      {
-        "id": 1,
-        "nome": "Smartphone Galaxy S23",
-        "preco": 3499.90,
-        "categoria": "Celulares",
-        "imagem": "https://example.com/imagens/galaxy-s23.jpg",
-        "descricao": "Smartphone com 128GB de armazenamento, câmera de alta resolução e excelente desempenho.",
-        "emEstoque": true
-      },
-      {
-        "id": 2,
-        "nome": "Notebook Dell Inspiron 15",
-        "preco": 4599.00,
-        "categoria": "Notebooks",
-        "imagem": "https://example.com/imagens/dell-inspiron-15.jpg",
-        "descricao": "Notebook com processador Intel i7, 16GB de RAM e SSD de 512GB, ideal para trabalho e estudos.",
-        "emEstoque": false
-      }
-    ]
+const API_URL = "http://localhost:3000/catalogo";
+
+async function fetchItems() {
+  const response = await fetch(API_URL);
+  if (!response.ok) throw new Error("Erro ao buscar dados.");
+  return await response.json();
+}
+
+function createCard(item) {
+  const card = document.createElement("div");
+  card.className = "filme-card";
+
+  card.innerHTML = `
+    <img src="${item.imagem}" alt="${item.titulo}">
+    <div class="card-body">
+      <span class="categoria">${item.categoria} · ${item.tipo === "serie" ? "Série" : "Filme"}</span>
+      <h2>${item.titulo}</h2>
+      <p>${item.descricaoCurta}</p>
+      <div class="card-footer">
+        <span class="nota">⭐ ${item.nota}</span>
+        <button class="btn-favorito" data-id="${item.id}" onclick="toggleFavorito(${item.id}, this)">🤍</button>
+        <a href="details.html?id=${item.id}">Ver detalhes →</a>
+      </div>
+    </div>
+  `;
+
+  return card;
+}
+
+function renderCards(items) {
+  const container = document.getElementById("cards-lista");
+  container.innerHTML = "";
+
+  if (!items || items.length === 0) {
+    showMessage("Nenhum item encontrado.");
+    return;
   }
 
+  showMessage("");
+  items.forEach(item => container.appendChild(createCard(item)));
+  marcarFavoritosNosCards();
+}
 
-  
+function showMessage(text) {
+  document.getElementById("message").textContent = text;
+}
+
+async function init() {
+  showMessage("Carregando...");
+  try {
+    const items = await fetchItems();
+    renderCards(items);
+  } catch (error) {
+    showMessage("Erro ao carregar. Json não está ativado.");
+    console.error(error);
+  }
+}
+
+// ---- Favoritos ----
+
+function getFavoritos(usuarioId) {
+  const dados = localStorage.getItem(`favoritos_${usuarioId}`);
+  return dados ? JSON.parse(dados) : [];
+}
+
+function setFavoritos(usuarioId, lista) {
+  localStorage.setItem(`favoritos_${usuarioId}`, JSON.stringify(lista));
+}
+
+function marcarFavoritosNosCards() {
+  const dados = sessionStorage.getItem("usuarioCorrente");
+  if (!dados) return;
+  const usuario = JSON.parse(dados);
+  const favs = getFavoritos(usuario.id);
+  document.querySelectorAll(".btn-favorito").forEach(btn => {
+    const id = parseInt(btn.dataset.id);
+    btn.textContent = favs.includes(id) ? "❤️" : "🤍";
+  });
+}
+
+function toggleFavorito(itemId, btn) {
+  const dados = sessionStorage.getItem("usuarioCorrente");
+  if (!dados) {
+    alert("Você precisa estar logado para favoritar.");
+    window.location.href = "/modulos/login/index.html";
+    return;
+  }
+  const usuario = JSON.parse(dados);
+  const favs = getFavoritos(usuario.id);
+  const idx = favs.indexOf(itemId);
+  if (idx === -1) {
+    favs.push(itemId);
+    btn.textContent = "❤️";
+  } else {
+    favs.splice(idx, 1);
+    btn.textContent = "🤍";
+  }
+  setFavoritos(usuario.id, favs);
+}
+
+init();

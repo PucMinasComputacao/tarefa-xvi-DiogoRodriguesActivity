@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Top Filmes - Usando chart.js </title>
+</head>
+
+    <body class="bg-dark text-white">
+ 
+  <header class="bg-secondary p-3">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <img src="assets/img/FotoPerfil.jpg" class="rounded-circle" width="40">
+        <a href="index.html" class="text-white text-decoration-none fw-bold mt-2 mt-md-0">← Voltar ao Catálogo</a>
+        <p class="girar">GiraGira</p>
+      </div>
+    </div>
+  </header>
+ 
+  <section class="container py-5">
+    <h1 class="mb-1">Minhas Avaliações</h1>
+    <p class="text-secondary mb-5">Visualização dinâmica das notas — do que mais avalidado ao menos avaliado.</p>
+ 
+    
+    <div class="chart-card">
+      <h2>⭐ Ranking geral por nota</h2>
+      <div class="chart-wrapper">
+        <canvas id="chartGeral"></canvas>
+      </div>
+
+    </div>
+ 
+    
+    <div class="chart-card">
+      <h2>🎬 Ranking — apenas Filmes</h2>
+      <div class="chart-wrapper">
+        <canvas id="chartFilmes"></canvas>
+      </div>
+    </div>
+ 
+ 
+    <div class="chart-card">
+      <h2>📺 Ranking — apenas Séries</h2>
+      <div class="chart-wrapper">
+        <canvas id="chartSeries"></canvas>
+      </div>
+    </div>
+  </section>
+ 
+  <footer class="bg-secondary text-white py-4">
+    <div class="container">
+      <div class="row text-center text-md-start align-items-center">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <p class="mb-0">Feito por Diogo Rodrigues</p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-end">
+          <p class="mb-0">© 2026 - Puc Minas</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+      <script src="graficos.js"></script>
+</body>
+</html>
