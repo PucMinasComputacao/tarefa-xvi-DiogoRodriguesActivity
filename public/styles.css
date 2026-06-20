@@ -95,6 +95,50 @@ header h1 { font-size: 1.4rem; }
 
 .card-footer a:hover { text-decoration: underline; }
 
+/* ---- Botões de ação CRUD ---- */
+.card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.btn-acao {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-editar {
+  background: #2a2a2a;
+  color: #e8b14b;
+  border: 1px solid #e8b14b;
+}
+
+.btn-editar:hover { background: #e8b14b; color: #111; }
+
+.btn-deletar {
+  background: #2a2a2a;
+  color: #e05c5c;
+  border: 1px solid #e05c5c;
+}
+
+.btn-deletar:hover { background: #e05c5c; color: #fff; }
+
+.btn-adicionar {
+  background: #e8b14b;
+  color: #111;
+  font-weight: 700;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.btn-adicionar:hover { background: #d4a043; }
+
+/* ---- fim botões CRUD ---- */
 
 .voltar {
   display: inline-block;
@@ -140,7 +184,6 @@ header h1 { font-size: 1.4rem; }
   font-size: 0.75rem;
   padding: 3px 10px;
   border-radius: 20px;
-
 }
 
 #botaoPaginaGraficos{
@@ -150,7 +193,6 @@ header h1 { font-size: 1.4rem; }
     border-radius: 10px;
     text-align: center;
     align-content: center;
-
 }
 
 #botaoPaginaGraficos p{

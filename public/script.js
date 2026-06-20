@@ -21,6 +21,10 @@ function createCard(item) {
         <button class="btn-favorito" data-id="${item.id}" onclick="toggleFavorito(${item.id}, this)">🤍</button>
         <a href="details.html?id=${item.id}">Ver detalhes →</a>
       </div>
+      <div class="card-actions">
+        <a href="modulos/form.html?id=${item.id}" class="btn-acao btn-editar">✏️ Editar</a>
+        <button class="btn-acao btn-deletar" onclick="deletarItem(${item.id})">🗑️ Deletar</button>
+      </div>
     </div>
   `;
 
@@ -43,6 +47,18 @@ function renderCards(items) {
 
 function showMessage(text) {
   document.getElementById("message").textContent = text;
+}
+
+async function deletarItem(id) {
+  if (!confirm("Tem certeza que deseja deletar este item?")) return;
+
+  try {
+    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    const items = await fetchItems();
+    renderCards(items);
+  } catch (e) {
+    showMessage("Erro ao deletar.");
+  }
 }
 
 async function init() {
