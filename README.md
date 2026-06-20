@@ -25,8 +25,8 @@ Controle de versionamento avançado com Git (commits organizados e tags).
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
+- Nome: Diogo Rodrigues da Silva
+- Matricula: 915483
 
 ## Prints do trabalho
 
