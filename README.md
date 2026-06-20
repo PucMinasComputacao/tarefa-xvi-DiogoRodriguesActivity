@@ -30,9 +30,9 @@ Controle de versionamento avançado com Git (commits organizados e tags).
 
 ## Prints do trabalho
 
-<<  COLOQUE A IMAGEM - TELA DE CARDS DE PRODUTOS - AQUI >>
+![Tela Inicial](public/TelaBotoes.png)
 
-<<  COLOQUE A IMAGEM - TELA DE DETALHE DO PRODUTO - AQUI >>
+![Tela Inicial](public/TelaCreate.png)
 
-<<  COLOQUE A IMAGEM - TELA DO CONSOLE - AQUI >>
+![Tela Inicial](public/TelaDelete.png)
 
