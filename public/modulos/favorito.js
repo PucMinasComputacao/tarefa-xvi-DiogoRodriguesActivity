@@ -19,8 +19,6 @@ async function init() {
   const usuario = JSON.parse(dados);
   const favIds = getFavoritos(usuario.id).map(Number);
 
-  console.log("favIds:", favIds);
-
   if (favIds.length === 0) {
     showMessage("Você ainda não tem favoritos.");
     return;
@@ -30,12 +28,7 @@ async function init() {
   try {
     const response = await fetch(API_URL);
     const catalogo = await response.json();
-
-    console.log("catalogo ids:", catalogo.map(i => i.id));
-
     const itens = catalogo.filter(item => favIds.includes(Number(item.id)));
-
-    console.log("itens encontrados:", itens);
 
     const container = document.getElementById("cards-lista");
     container.innerHTML = "";

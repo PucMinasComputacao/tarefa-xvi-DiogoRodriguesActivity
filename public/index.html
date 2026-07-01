@@ -24,69 +24,76 @@
     </div>
   </header>
 
-
-  <section class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-12 col-md-6 mb-4 mb-md-0">
-        <video src="assets/img/videoplayback.mp4" class="w-100 rounded" controls></video>
+ 
+  <!-- CARROSSEL DE DESTAQUES -->
+  <section class="container py-4">
+    <h2 class="mb-3">⭐ Itens em Destaque</h2>
+    <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel-inner">
+        <!-- preenchido por JS -->
       </div>
-      <div class="col-12 col-md-6 text-center text-md-start">
-        <h1>Meu Jogo Favorito</h1>
-        <h3>Hollow Knight</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sint, praesentium, quis exercitationem.</p>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators" id="carousel-indicators"></div>
     </div>
   </section>
-
-
-  <section class="container py-5">
-    <div class="row text-center">
-      <div class="col-12 col-md-4 mb-4">
-        <p class="fw-bold">Certificado Python</p>
-        <img src="assets/img/CertificadoPyton.png" class="img-fluid rounded">
+ 
+  <!-- CARDS + PESQUISA -->
+  <section class="container py-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+      <h2 class="mb-0">🎞️ Todos os Itens</h2>
+      <div class="d-flex gap-2 align-items-center">
+        <input type="text" id="input-pesquisa" class="form-control bg-dark text-white border-secondary" placeholder="Pesquisar..." style="width:220px">
+        <button onclick="pesquisar()" class="btn" style="background:#e8b14b;color:#111">🔍</button>
+        <button onclick="limparPesquisa()" class="btn btn-outline-secondary">✕</button>
       </div>
-      <div class="col-12 col-md-4 mb-4">
-        <p class="fw-bold">Certificado Defesa de Rede</p>
-        <img src="assets/img/CertificadoDefesadeRedeCisco.png" class="img-fluid rounded">
-      </div>
-      <div class="col-12 col-md-4 mb-4">
-        <p class="fw-bold">Certificado Consciência Digital</p>
-        <img src="assets/img/CertificadoDigitalAwareness.png" class="img-fluid rounded">
-      </div>
-    </div>
-  </section>
-
-  <!-- CATÁLOGO -->
-  <section class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2>🎬 Catálogo de Filmes e Séries</h2>
-      <a href="modulos/form.html" class="btn-acao btn-adicionar">➕ Adicionar</a>
     </div>
     <p id="message" class="text-secondary"></p>
     <div id="cards-lista" class="cards-grid"></div>
-    
+  </section>
+ 
+  <!-- GRÁFICOS -->
+  <section class="container py-4">
+    <h2 class="mb-3">📊 Visualização de Gráficos</h2>
     <a id="btngr" href="graficos.html">
       <div id="botaoPaginaGraficos">
-        <p>Ver Graficos</p>
+        <p>Ver Gráficos</p>
       </div>
     </a>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-secondary text-white py-4">
-    <div class="container">
-      <div class="row text-center text-md-start align-items-center">
-        <div class="col-12 col-md-4 mb-3 mb-md-0">
-          <p class="mb-0">Feito por Diogo Rodrigues</p>
-        </div>
-        <div class="col-12 col-md-4 text-center text-md-end">
-          <p class="mb-0">© 2026 - Puc Minas</p>
+ 
+  <!-- INFORMAÇÕES DO AUTOR -->
+  <section class="container py-5 border-top border-secondary">
+    <h2 class="mb-4">👤 Informações do Autor</h2>
+    <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+      <img src="assets/img/FotoPerfil.jpg" class="rounded-circle" width="120" height="120" style="object-fit:cover">
+      <div>
+        <h4 class="mb-1">Diogo Rodrigues</h4>
+        <p class="text-secondary mb-1">Curso: Engenharia de Software — PUC Minas</p>
+        <p class="text-secondary mb-3">Amante de cinema, tecnologia e jogos. Desenvolvedor em formação com foco em web.</p>
+        <div class="d-flex gap-3">
+          <a href="https://github.com" target="_blank" class="text-white text-decoration-none">🐙 GitHub</a>
+          <a href="https://linkedin.com" target="_blank" class="text-white text-decoration-none">💼 LinkedIn</a>
         </div>
       </div>
     </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="bg-secondary text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <p class="mb-0">Feito por Diogo Rodrigues</p>
+      <p class="mb-0">© 2026 - PUC Minas</p>
+    </div>
   </footer>
-
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
   <script>initLoginApp();</script>
+  
 </body>
 </html>

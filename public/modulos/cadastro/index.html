@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white d-flex align-items-center justify-content-center" style="min-height:100vh">
+
+  <div style="width:340px">
+    <h2 class="mb-1 text-center">🎬 Cadastro</h2>
+    <p class="text-center text-secondary mb-4" style="font-size:0.85rem">Crie sua conta para favoritar itens</p>
+    <p id="msg-erro" class="text-danger text-center" style="display:none"></p>
+    <p id="msg-ok" class="text-success text-center" style="display:none"></p>
+
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input type="text" id="input-nome" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Login</label>
+      <input type="text" id="input-login" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" id="input-email" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <div class="mb-4">
+      <label class="form-label">Senha</label>
+      <input type="password" id="input-senha" class="form-control bg-dark text-white border-secondary">
+    </div>
+    <button id="btn-cadastrar" class="btn w-100 fw-bold mb-3" style="background:#e8b14b;color:#111">Cadastrar</button>
+    <p class="text-center text-secondary" style="font-size:0.85rem">
+      Já tem conta? <a href="index.html" class="text-warning">Entrar</a>
+    </p>
+  </div>
+
+  <script src="../../login.js"></script>
+  <script>
+    document.getElementById("btn-cadastrar").addEventListener("click", async () => {
+      const nome  = document.getElementById("input-nome").value.trim();
+      const login = document.getElementById("input-login").value.trim();
+      const email = document.getElementById("input-email").value.trim();
+      const senha = document.getElementById("input-senha").value.trim();
+      const erro  = document.getElementById("msg-erro");
+      const ok    = document.getElementById("msg-ok");
+
+      erro.style.display = "none";
+      ok.style.display = "none";
+
+      if (!nome || !login || !email || !senha) {
+        erro.textContent = "Preencha todos os campos.";
+        erro.style.display = "block";
+        return;
+      }
+
+      const resultado = await cadastrarUsuario(nome, login, email, senha);
+      if (resultado.erro) {
+        erro.textContent = resultado.erro;
+        erro.style.display = "block";
+      } else {
+        window.location.href = "../../index.html";
+      }
+    });
+  </script>
+</body>
+</html>
