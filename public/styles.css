@@ -272,3 +272,17 @@ header h1 { font-size: 1.4rem; }
   padding: 0;
   line-height: 1;
 }
+
+.form-control,
+.form-select,
+textarea {
+  color: #ffffff !important;
+  background-color: #343a40 !important;
+}
+
+.form-control::placeholder {
+  color: #adb5bd !important;
+}
+.form-label{
+  color: #ffffff;
+}

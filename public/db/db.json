@@ -9,8 +9,12 @@
       "categoria": "Ação",
       "nota": 8.6,
       "tipo": "filme",
-      "destaque": true,
-      "tags": ["ação", "crime", "brasil"]
+      "destaque": false,
+      "tags": [
+        "ação",
+        "crime",
+        "brasil"
+      ]
     },
     {
       "id": "2",
@@ -21,8 +25,12 @@
       "categoria": "Animação",
       "nota": 8.1,
       "tipo": "filme",
-      "destaque": true,
-      "tags": ["animação", "aventura", "família"]
+      "destaque": false,
+      "tags": [
+        "animação",
+        "aventura",
+        "família"
+      ]
     },
     {
       "id": "3",
@@ -34,7 +42,11 @@
       "nota": 7.3,
       "tipo": "filme",
       "destaque": false,
-      "tags": ["drama", "esporte", "superação"]
+      "tags": [
+        "drama",
+        "esporte",
+        "superação"
+      ]
     },
     {
       "id": "4",
@@ -46,7 +58,11 @@
       "nota": 8.8,
       "tipo": "filme",
       "destaque": true,
-      "tags": ["thriller", "drama", "cult"]
+      "tags": [
+        "thriller",
+        "drama",
+        "cult"
+      ]
     },
     {
       "id": "5",
@@ -58,7 +74,11 @@
       "nota": 9.4,
       "tipo": "serie",
       "destaque": true,
-      "tags": ["drama", "histórico", "brasil"]
+      "tags": [
+        "drama",
+        "histórico",
+        "brasil"
+      ]
     },
     {
       "id": "6",
@@ -69,8 +89,12 @@
       "categoria": "Crime",
       "nota": 9.5,
       "tipo": "serie",
-      "destaque": true,
-      "tags": ["crime", "drama", "premiado"]
+      "destaque": false,
+      "tags": [
+        "crime",
+        "drama",
+        "premiado"
+      ]
     },
     {
       "id": "7",
@@ -81,8 +105,12 @@
       "categoria": "Ação",
       "nota": 8.7,
       "tipo": "serie",
-      "destaque": false,
-      "tags": ["ação", "sátira", "ficção científica"]
+      "destaque": true,
+      "tags": [
+        "ação",
+        "sátira",
+        "ficção científica"
+      ]
     },
     {
       "id": "8",
@@ -94,56 +122,100 @@
       "nota": 8.9,
       "tipo": "serie",
       "destaque": true,
-      "tags": ["animação", "super-herói", "adulto"]
+      "tags": [
+        "animação",
+        "super-herói",
+        "adulto"
+      ]
     },
     {
       "id": "9",
-      "titulo": "Cena de Fuga — Invencível",
+      "titulo": "Demon Slayer",
+      "descricaoCurta": "Demon Slayer é uma série japonesa de mangá shōnen escrita e ilustrada por Koyoharu Gotōge. O mangá foi serializado de 15 de fevereiro de 2016 .",
+      "descricaoCompleta": "Ambientada no Japão durante o Período Taishō (1912-1926), a história gira em torno de Tanjiro Kamado, um garoto bondoso e inteligente que vive junto com sua mãe, Kie Kamado, e seus 5 irmãos mais novos, ganhando dinheiro vendendo carvão, assim como seu falecido pai, tanjuro Kamado. Certo dia, ao voltar para casa após ter ido a uma cidade vender carvão, Tanjiro descobre que perdeu toda sua família durante um ataque de onis. Uma de suas irmãs, Nezuko, é a única que sobreviveu ao ataque.",
+      "imagem": "assets/img/DemonSlayerSerie.webp",
+      "categoria": "Animação",
+      "nota": 9.8,
       "tipo": "serie",
-      "categoria": "Ação",
-      "nota": 8.5,
-      "descricaoCurta": "Momento de virada em que Mark enfrenta as consequências de seus poderes.",
-      "descricaoCompleta": "Uma das cenas mais intensas da série, mostrando o peso emocional e físico de ser um super-herói no universo de Invencível.",
-      "imagem": "assets/img/CenaFugaInvencivel.jpg",
-      "tags": ["ação", "super-herói"],
-      "destaque": false
+      "destaque": true,
+      "tags": [
+        "animação",
+        "Suspense",
+        "combate"
+      ]
     },
     {
       "id": "10",
-      "titulo": "Favela do Turano — Tropa de Elite",
-      "descricaoCurta": "Operação do BOPE na favela do Turano, um dos momentos mais tensos do filme.",
-      "descricaoCompleta": "Cena emblemática de Tropa de Elite que retrata a brutalidade e a complexidade das operações policiais nas favelas cariocas. José Padilha filma com um realismo desconcertante.",
-      "imagem": "assets/img/FavelaTurano.jpg",
-      "categoria": "Ação",
-      "nota": 8.6,
-      "tipo": "filme",
+      "titulo": "Harry Potter e a Pedra Filosofal",
+      "descricaoCurta": "Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos.",
+      "descricaoCompleta": "Harry Potter é um garoto órfão de dez anos que mora com seus desagradáveis tios, os Dursley, em Surrey. Na véspera de seu aniversário de onze anos, coisas incomuns começam a acontecer, como ir no zoológico com seu mimado primo Duda e descobrir que consegue falar com uma cobra e ainda fazer o vidro de proteção da serpente desaparecer sem explicação. Perto do seu 11º aniversário, cartas da Escola de Magia e Bruxaria de Hogwarts são enviadas para ele, que seus tios tentam a todo custo destruir. No dia de seu aniversário, Harry e seus tios são surpreendidos por um meio-gigante chamado Rúbeo Hagrid, que lhe conta que Harry é um bruxo assim como seus pais também eram. Os tios de Harry tentaram esconder isso desde que o aceitaram quando ele ainda era um bebê. Após uma discussão, Hagrid finalmente entrega a carta, que diz que Harry foi convidado a ingressar à Hogwarts. ",
+      "imagem": "assets/img/HarryPotterPedra.jpg",
+      "categoria": "Animação",
+      "nota": 8.9,
+      "tipo": "serie",
       "destaque": false,
-      "tags": ["ação", "crime", "brasil"]
+      "tags": [
+        "animação",
+        "super-herói",
+        "adulto"
+      ]
     }
   ],
   "categorias": [
-    { "id": "1", "nome": "Ação" },
-    { "id": "2", "nome": "Drama" },
-    { "id": "3", "nome": "Animação" },
-    { "id": "4", "nome": "Thriller" },
-    { "id": "5", "nome": "Crime" }
+    {
+      "id": "1",
+      "nome": "Ação"
+    },
+    {
+      "id": "2",
+      "nome": "Drama"
+    },
+    {
+      "id": "3",
+      "nome": "Animação"
+    },
+    {
+      "id": "4",
+      "nome": "Thriller"
+    },
+    {
+      "id": "5",
+      "nome": "Crime"
+    }
   ],
   "usuarios": [
     {
       "id": "1",
       "nome": "Admin",
-      "login": "admin",
-      "senha": "123",
+      "login": "Administrador",
+      "senha": "admin123",
       "email": "admin@email.com",
       "admin": true
     },
     {
       "id": "2",
       "nome": "User",
-      "login": "user",
-      "senha": "123",
+      "login": "Usuario",
+      "senha": "User123",
       "email": "user@email.com",
       "admin": false
+    },
+    {
+      "id": "pZvtSDCXeQQ",
+      "nome": "Diogo",
+      "login": "Usuario",
+      "email": "2222",
+      "senha": "2222",
+      "admin": false
+    },
+    {
+      "nome": "aaaaaaaaa",
+      "login": "Administrador",
+      "email": "122112",
+      "senha": "121212",
+      "admin": true,
+      "id": "j8xX96UEvzc"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

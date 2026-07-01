@@ -19,8 +19,13 @@
       <input type="text" id="input-nome" class="form-control bg-dark text-white border-secondary">
     </div>
     <div class="mb-3">
-      <label class="form-label">Login</label>
-      <input type="text" id="input-login" class="form-control bg-dark text-white border-secondary">
+
+      <label class="form-label">Tipo de conta</label>
+      <select id="input-tipo" class="form-select bg-dark text-white border-secondary">
+        <option value="false">Usuário comum</option>
+        <option value="true">Administrador</option>
+      </select>
+
     </div>
     <div class="mb-3">
       <label class="form-label">Email</label>
@@ -39,30 +44,29 @@
   <script src="../../login.js"></script>
   <script>
     document.getElementById("btn-cadastrar").addEventListener("click", async () => {
-      const nome  = document.getElementById("input-nome").value.trim();
-      const login = document.getElementById("input-login").value.trim();
-      const email = document.getElementById("input-email").value.trim();
-      const senha = document.getElementById("input-senha").value.trim();
-      const erro  = document.getElementById("msg-erro");
-      const ok    = document.getElementById("msg-ok");
+    const nome  = document.getElementById("input-nome").value.trim();
+    const tipo  = document.getElementById("input-tipo").value === "true";
+    const email = document.getElementById("input-email").value.trim();
+    const senha = document.getElementById("input-senha").value.trim();
+    const erro  = document.getElementById("msg-erro");
 
-      erro.style.display = "none";
-      ok.style.display = "none";
+     erro.style.display = "none";
 
-      if (!nome || !login || !email || !senha) {
-        erro.textContent = "Preencha todos os campos.";
-        erro.style.display = "block";
-        return;
-      }
+    if (!nome || !email || !senha) {
+      erro.textContent = "Preencha todos os campos.";
+      erro.style.display = "block";
+      return;
+    }
+    const login = tipo ? "Administrador" : "Usuario";
 
-      const resultado = await cadastrarUsuario(nome, login, email, senha);
-      if (resultado.erro) {
-        erro.textContent = resultado.erro;
-        erro.style.display = "block";
-      } else {
-        window.location.href = "../../index.html";
-      }
-    });
+    const resultado = await cadastrarUsuario(nome, login, email, senha, tipo);
+    if (resultado.erro) {
+      erro.textContent = resultado.erro;
+      erro.style.display = "block";
+    } else {
+      window.location.href = "../../index.html";
+    }
+  });
   </script>
 </body>
 </html>

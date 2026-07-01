@@ -23,13 +23,12 @@ async function loginUser(login, senha) {
   return usuario;
 }
 
-async function cadastrarUsuario(nome, login, email, senha) {
-  // verifica se login já existe
+async function cadastrarUsuario(nome, login, email, senha, admin = false) {
   const response = await fetch("http://localhost:3000/usuarios");
   const usuarios = await response.json();
-  if (usuarios.find(u => u.login === login)) return { erro: "Login já cadastrado." };
+  if (usuarios.find(u => u.email === email)) return { erro: "Email já cadastrado." };
 
-  const novoUsuario = { nome, login, email, senha, admin: false };
+  const novoUsuario = { nome, login, email, senha, admin };
   const res = await fetch("http://localhost:3000/usuarios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
