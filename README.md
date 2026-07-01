@@ -21,7 +21,12 @@ Organização de projetos web profissionais.
 Atualização dinâmica da DOM.
 Uso das ferramentas do desenvolvedor do navegador (DevTools / Network).
 Controle de versionamento avançado com Git (commits organizados e tags).
- 
+
+
+ -- A fazer:
+ Botão para cirar filme,
+ A pessoa só precia escrever o nome do arquivo, o caminho já ira automatico, 
+ melhorar e MUITO a experiencia visual
 
 ## Informações Gerais
 
